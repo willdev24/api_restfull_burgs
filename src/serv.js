@@ -1,7 +1,8 @@
 const express = require("express")
 const cors = require("cors")
 const { route } = require("./routes/routes")
-const { conet } = require("./model/model")
+const { conet } = require("./database_/database")
+
 const app = express()
 
 //conectar o banco de dados
@@ -17,6 +18,7 @@ app.use(cors({
 
 
 }))
+
 
 
 app.get("/id:?",route)

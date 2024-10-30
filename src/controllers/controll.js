@@ -1,4 +1,7 @@
+const { model } = require("../model")
+
 function get(req,res){
+ 
 
     res.send("ola mundo")
 
