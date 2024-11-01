@@ -41,7 +41,7 @@ async function del(req,res){
     const {id} = req.params
     const excluir = await customes.Model.findByIdAndDelete({_id:id})
     
-    res.send(200)
+    res.sendStatus(200)
 
 }
 
