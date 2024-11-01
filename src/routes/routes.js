@@ -3,10 +3,10 @@ const controllRoutes = require("../controllers/controll")
 const route = require("express").Router()
 
 
-route.get("/id:?",controllRoutes.get)
+route.get("/:id?",controllRoutes.get)
 route.post("/",controllRoutes.post)
-route.patch("/id:",controllRoutes.patch)
-route.delete("/id:",controllRoutes.del)
+route.put("/:id",controllRoutes.put)
+route.delete("/:id",controllRoutes.del)
 
 module.exports={
     route

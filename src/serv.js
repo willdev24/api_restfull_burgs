@@ -3,7 +3,9 @@ const cors = require("cors")
 const { route } = require("./routes/routes")
 const { conet } = require("./database_/database")
 
+
 const app = express()
+app.use(express.json())
 
 //conectar o banco de dados
 conet()
@@ -16,12 +18,25 @@ const enderecos = [
 
 app.use(cors({
 
+    origin:function(origin, callback){
+
+     if(enderecos.indexOf(origin !== -1 || !origin )) callback(null, true) 
+
+        else{
+            callback(new console.error("errro ao tentar linkar serv"))
+        }
+    }
 
 }))
 
 
 
-app.get("/id:?",route)
+app.get("/:id?",route)
+app.post("/",route)
+app.put("/:id",route)
+app.delete("/:id",route)
+
+
 
 
 
