@@ -7,7 +7,10 @@ const shema = new mongoose.Schema({
 })
 
 const Model = mongoose.model("cadastros", shema)
+const Model02 = mongoose.model("clants", shema)
+
 
 module.exports ={
-    Model
+    Model,
+    Model02
 }
