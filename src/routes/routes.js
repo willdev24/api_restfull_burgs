@@ -1,5 +1,5 @@
 const controllRoutes = require("../controllers/controll")
-const controllRoutes02 = require("../controllers/claints")
+
 
 
 const route = require("express").Router()
@@ -13,6 +13,7 @@ route.delete("/:id",controllRoutes.del)
 
 //rotas clientes
 //route.
+
 
 module.exports={
     route
