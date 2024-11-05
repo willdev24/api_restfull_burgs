@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const shema = new mongoose.Schema({
     nome:String,
-    idade:Number,
+    quantidade:Number,
 
 })
 const shemaClints = new mongoose.Schema({

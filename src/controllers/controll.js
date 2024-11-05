@@ -1,12 +1,13 @@
+const { query } = require("express")
 const customes = require("../model")
 
 
 async function get(req,res){
 
     const {id} = req.params
-
+    console.log(req.query) 
 const obj = id? {_id:id} : null
- 
+
   const listas = await  customes.Model.find(obj)
     res.send(listas)
    
@@ -14,11 +15,11 @@ const obj = id? {_id:id} : null
 }
 
 async function post(req,res){
-   const {nome ,idade} = req.body
+   const {nome ,quantidade} = req.body
 
    const dados = await new customes.Model({
     nome,
-    idade,
+    quantidade,
    })
 
    dados.save()

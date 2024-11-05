@@ -3,6 +3,7 @@ const customesModel = require("../model")
 async function getClaint(req,res){
 
     const {id} = req.params
+    console.log(id)
 
 const obj = id? {_id:id} : null
  
@@ -11,6 +12,21 @@ const obj = id? {_id:id} : null
    
 
 }
+
+
+async function getClaintId(req,res){
+
+    const {id} = req.params
+console.log(id)
+if(id == null) throw new Error("invalido");
+
+ else{
+  const listas = await customesModel.Model02.find({_id:id})
+    res.send(listas)
+ }}
+
+
+
 
 async function postClaint(req, res){
 const {nome, idade,contato} = req.body
@@ -39,6 +55,7 @@ async function delClaint(req, res){
 
 module.exports={
     getClaint,
+    getClaintId,
     postClaint,
     putClaint,
     delClaint
