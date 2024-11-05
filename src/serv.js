@@ -3,7 +3,6 @@ const cors = require("cors")
 const { route } = require("./routes/routes")
 const { conet } = require("./database_/database")
 
-
 const app = express()
 app.use(express.json())
 
@@ -15,7 +14,7 @@ app.use(cors())
 const enderecos = [
 
 ]
-/*
+
 app.use(cors({
 
     origin:function(origin, callback){
@@ -28,23 +27,20 @@ app.use(cors({
     }
 
 }))
-*/
 
 
-app.get("/:id?",route)
-app.post("/",route)
-app.put("/:id",route)
-app.delete("/:id",route)
 
-/*app.get("/teste",(req, res)=>{
-res.send("ok")
-})
-*/
+app.use("/",route)
+app.use("/",route)
+app.use("/:id",route)
+app.use("/:id",route)
 
-//app.get("/claint",route02)
-//app.post("/claint",route02)
-//app.put("/claint:id",route)
-//app.delete("/claint:id",route)
+
+
+app.use("/claint",route)
+app.use("/claint",route)
+app.use("/claint:id",route)
+app.use("/claint:id",route)
 
 
 

@@ -1,14 +1,12 @@
 const customesModel = require("../model")
 
-
-
 async function getClaint(req,res){
 
     const {id} = req.params
 
 const obj = id? {_id:id} : null
  
-  const listas = customesModel.Model02.find(obj)
+  const listas = await customesModel.Model02.find(obj)
     res.send(listas)
    
 

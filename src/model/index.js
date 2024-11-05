@@ -17,6 +17,6 @@ const Model02 = mongoose.model("clants", shemaClints)
 
 
 module.exports ={
-    Model,
-    Model02
+    Model
+  , Model02
 }
