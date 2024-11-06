@@ -35,12 +35,11 @@ app.use("/",route)
 app.use("/:id",route)
 app.use("/:id",route)
 
-
-
 app.use("/claint",route)
 app.use("/claint",route)
 app.use("/claint/:id",route)
 app.use("/claint/:id",route)
+
 
 
 

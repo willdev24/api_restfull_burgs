@@ -13,14 +13,19 @@ const shemaClints = new mongoose.Schema({
 
 })
 
-
+const schemaPedidos = new mongoose.Schema({
+    nome:String,
+    data:String,
+    pedidos:Array
+})
 
 
 const Model = mongoose.model("pedidos", shema)
 const Model02 = mongoose.model("claints", shemaClints)
-
+const model03 = mongoose.model("listaDEpedidos", schemaPedidos)
 
 module.exports ={
-    Model
-  , Model02
+    Model,
+    Model02,
+    model03
 }

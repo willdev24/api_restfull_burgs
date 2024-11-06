@@ -19,6 +19,10 @@ route.post("/claint", controllClaint.postClaint)
 route.put("/claint/:id", controllClaint.putClaint)
 route.delete("/claint/:id", controllClaint.delClaint)
 
+//lista de pedidos
+route.get()
+route.post()
+
 module.exports={
     route
 }
