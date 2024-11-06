@@ -1,19 +1,23 @@
 const mongoose = require("mongoose")
 
 const shema = new mongoose.Schema({
-    nome:String,
-    quantidade:Number,
+        nome:String,
+        preco:Number,
 
 })
 const shemaClints = new mongoose.Schema({
     nome:String,
-    idade:Number,
+    email:String,
     contato:Number,
+    endereco:String,
 
 })
 
-const Model = mongoose.model("cadastros", shema)
-const Model02 = mongoose.model("clants", shemaClints)
+
+
+
+const Model = mongoose.model("pedidos", shema)
+const Model02 = mongoose.model("claints", shemaClints)
 
 
 module.exports ={

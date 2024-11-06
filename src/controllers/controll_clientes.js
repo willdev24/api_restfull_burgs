@@ -14,27 +14,14 @@ const obj = id? {_id:id} : null
 }
 
 
-async function getClaintId(req,res){
-
-    const {id} = req.params
-console.log(id)
-if(id == null) throw new Error("invalido");
-
- else{
-  const listas = await customesModel.Model02.find({_id:id})
-    res.send(listas)
- }}
-
-
-
-
 async function postClaint(req, res){
-const {nome, idade,contato} = req.body
+const {nome, email ,contato, endereco} = req.body
 
     const clients = await new customesModel.Model02({
         nome,
-        idade,
+        email,
         contato,
+        endereco
     })
 
     clients.save()
@@ -44,18 +31,29 @@ const {nome, idade,contato} = req.body
 }
 async function putClaint(req, res){
 
+    const {id} = req.params
+    console.log(id)
+
+    const update = await customesModel.Model02.findByIdAndUpdate({_id:id},req.body,{new:true})
     
+    res.send(update)
+
+
     
 }
 async function delClaint(req, res){
 
-    
+    const {id} = req.params
+    const excluir = await customesModel.Model02.findByIdAndDelete({_id:id})
+ 
+    if(excluir == null) return res.send("cliente ainda nao cadastrado")
+
+    res.send("cliente excluido")
     
 }
 
 module.exports={
     getClaint,
-    getClaintId,
     postClaint,
     putClaint,
     delClaint

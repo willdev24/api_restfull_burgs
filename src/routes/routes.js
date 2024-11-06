@@ -15,10 +15,9 @@ route.delete("/:id",controllRoutes.del)
 //route.
 
 route.get("/claint", controllClaint.getClaint)
-route.get("/cl:id", controllClaint.getClaintId)
 route.post("/claint", controllClaint.postClaint)
-route.put("/claint:id", controllClaint.putClaint)
-route.delete("/claint:id", controllClaint.delClaint)
+route.put("/claint/:id", controllClaint.putClaint)
+route.delete("/claint/:id", controllClaint.delClaint)
 
 module.exports={
     route

@@ -15,11 +15,11 @@ const obj = id? {_id:id} : null
 }
 
 async function post(req,res){
-   const {nome ,quantidade} = req.body
-
+   const {nome , preco} = req.body
+   console.log(req.body)
    const dados = await new customes.Model({
     nome,
-    quantidade,
+    preco,
    })
 
    dados.save()
@@ -41,8 +41,10 @@ res.status(200).send(update)
 async function del(req,res){
     const {id} = req.params
     const excluir = await customes.Model.findByIdAndDelete({_id:id})
-    
-    res.sendStatus(200)
+   
+    if(excluir == null)  return res.send("id nao existe")
+   
+        res.sendStatus(200)
 
 }
 
