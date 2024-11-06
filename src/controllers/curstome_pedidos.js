@@ -1,6 +1,6 @@
 async function getPedidos(req, res){
     
-const {daa} = req.body
+//const {daa} = req.body
 
 }
 
