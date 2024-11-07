@@ -3,7 +3,7 @@ const customesModel = require("../model")
 async function getClaint(req,res){
 
     const {id} = req.params
-    console.log(id)
+
 
 const obj = id? {_id:id} : null
  
@@ -32,8 +32,7 @@ const {nome, email ,contato, endereco} = req.body
 async function putClaint(req, res){
 
     const {id} = req.params
-    console.log(id)
-
+   
     const update = await customesModel.Model02.findByIdAndUpdate({_id:id},req.body,{new:true})
     
     res.send(update)

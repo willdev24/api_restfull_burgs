@@ -20,7 +20,7 @@ const schemaPedidos = new mongoose.Schema({
 })
 
 
-const Model = mongoose.model("pedidos", shema)
+const Model = mongoose.model("produtos", shema)
 const Model02 = mongoose.model("claints", shemaClints)
 const model03 = mongoose.model("listaDEpedidos", schemaPedidos)
 

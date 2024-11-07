@@ -1,3 +1,4 @@
+const controlADM = require("../controllers")
 const controllRoutes = require("../controllers/controll")
 const controllClaint = require("../controllers/controll_clientes")
 
@@ -22,6 +23,11 @@ route.delete("/claint/:id", controllClaint.delClaint)
 //lista de pedidos
 //route.get()
 //route.post()
+
+//rota administrador 
+route.get("/acess", controlADM.adm)
+//route.get("/login_administrator/painel")
+
 
 module.exports={
     route
