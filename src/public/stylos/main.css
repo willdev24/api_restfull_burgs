@@ -50,7 +50,7 @@ div{
 
 #formu #divNome input , #formu #divSenha input {
     width: 100%;
-    padding: 10px 0px;
+    padding: 8px 0px;
     outline: none;
     border: 0;
     background: transparent;
@@ -65,6 +65,7 @@ label{
     font-family: Arial, Helvetica, sans-serif;
     position:absolute;
     left: 0;
+    margin-top: 15px;
     padding: 10px 0;
     color: #fff;
     font-size: 14px;
@@ -76,8 +77,8 @@ label{
 
 
 input:focus~label{
-    top: -1px;
-    font-size: 9px
+    top: -12px;
+    font-size: 10px
 }
 
 
