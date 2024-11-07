@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+*{  box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+ }
+
+main{
+    background-color: rgba(8, 172, 254, 0.425);
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+   
+}
+
+section{
+    border-radius: 3px;
+    height: 40vh;
+    width: 20vw;
+    background-color: rgba(51, 162, 162, 0.151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h2{
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color: rgb(0, 5, 134);
+ margin-top: -15px;
+ font-size: 35px;
+}
+
+#formu{
+position: relative;
+margin-top: 25px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 20vh;
+}
+
+div{
+    position: relative;
+}
+
+#formu #divNome input , #formu #divSenha input {
+    width: 100%;
+    padding: 10px 0px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+  
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    position:absolute;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+
+
+input:focus~label{
+    top: -1px;
+    font-size: 9px
+}
+
+
+
+#divbutao {
+    display: flex;
+    
+}
+
+button{
+    margin-top: 40px;
+    width: 10vw;
+    font-size: 20px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 8px;
+    font-family:'Courier New', Courier, monospace;
+    border-style: none;
+    cursor: pointer;
+}
+
+button:hover{
+    color: blue;
+    background-color: aliceblue;
+    transition: 400ms
+}
