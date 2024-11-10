@@ -1,8 +1,5 @@
 async function adm(req, res){
 
-    
-    
-    
     res.render("index")
 
 }
