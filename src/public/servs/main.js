@@ -1,38 +1,39 @@
-class user{
 
-    constructor(useruario , senha){
-       let _senha = this.senha
-        this.useruario = useruario
-        this.senhaAcess = senha 
-       
-        this.autentic = _senha
+const main ={
 
-    }
-
-    get novasenha(){
-return this.autentic
-        
-    }
-    
-    set novasenha(_novaSenha){
-
-        this.senha = _novaSenha
-        
-    }
+    init:function(){
+       this.adcionarEvents()
 
 
- login(){
+    },
 
-    console.log(this.senha, this.autentic)
-       if(this.senhaAcess == this.autentic && this.useruario == "Admin" ) return "acesso-liberado"
+    buscarHTML:function(){
 
-       else return "acess-negado"
- }   
-   
+        this.$ButaoEnviar = document.querySelector("#enviar")
+
+    },
+
+
+    adcionarEvents:function(){
+     const self = this
+
+    this.$ButaoEnviar.addEventListener("submit",this.Eventos.acessar.bind(self))
+
+    },
+
+
+Eventos:{
+
+acessar:function(e){
+
 
 
 }
 
-module.exports={
-    user
+
 }
+
+}
+
+
+main.init()
