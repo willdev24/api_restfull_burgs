@@ -23,7 +23,6 @@ return this.autentic
 
  login(){
 
-    console.log(this.senha, this.autentic)
        if(this.senhaAcess == this.autentic && this.useruario == "Admin" ) return "acesso-liberado"
 
        else return "acess-negado"
