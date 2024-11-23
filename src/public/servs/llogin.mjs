@@ -12,7 +12,7 @@ const senha = _senha
 //acesso
 const admin = new user(usua, senha)
 
-console.log(admin.login())
+return admin.login()
 
 }
 

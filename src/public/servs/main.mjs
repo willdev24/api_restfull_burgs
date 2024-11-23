@@ -40,11 +40,10 @@ const senha = document.forms["formu"].senha.value
 
 const result = this.config_acesso(nome, senha)
 
-console.log(result)
-},
+if(result == 'acesso-liberado') window.location.href = window.location.origin + "/loginAdministrator"
 
 
-},
+},},
 
 }
 

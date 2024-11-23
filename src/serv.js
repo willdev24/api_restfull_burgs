@@ -53,6 +53,7 @@ app.delete("/claint/:id",route)
 
 //rotas painel administrativo
 app.get("/acess",route)
+app.get("/loginAdministrator",route)
 
 
 //porta do servidor 

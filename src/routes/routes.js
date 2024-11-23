@@ -26,7 +26,7 @@ route.delete("/claint/:id", controllClaint.delClaint)
 
 //rota administrador 
 route.get("/acess", controlADM.adm)
-//route.get("/login_administrator/painel")
+route.get("/loginAdministrator" , controlADM.painelAdmin)
 
 
 module.exports={
