@@ -1,4 +1,4 @@
-class user{
+export default class user{
 
     constructor(useruario , senha){
        let _senha = this.senha
@@ -33,6 +33,3 @@ return this.autentic
 
 }
 
-module.exports={
-    user
-}

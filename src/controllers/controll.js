@@ -8,7 +8,7 @@ async function get(req,res){
     console.log(req.query) 
 const obj = id? {_id:id} : null
 
-  const listas = await  customes.Model.find(obj)
+  const listas = await customes.Model.find(obj)
     res.send(listas)
    
 
@@ -17,9 +17,9 @@ const obj = id? {_id:id} : null
 async function post(req,res){
    const {nome , preco} = req.body
    console.log(req.body)
-   const dados = await new customes.Model({
-    nome,
-    preco,
+   const dados = new customes.Model({
+       nome,
+       preco,
    })
 
    dados.save()
