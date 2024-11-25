@@ -5,11 +5,14 @@ const customes = require("../model")
 async function get(req,res){
 
     const {id} = req.params
-    console.log(req.query) 
-const obj = id? {_id:id} : null
+    
+  const obj = id? {_id:id} : null
 
   const listas = await customes.Model.find(obj)
-    res.send(listas)
+  console.log(listas)  
+  res.render("produtos.ejs",{
+       listas
+    })
    
 
 }
