@@ -1,8 +1,5 @@
 import validar from "./llogin.mjs"
 
-
-
-
 const main ={
         
     config_acesso: function(nome , senha ){
