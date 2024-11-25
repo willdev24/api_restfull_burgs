@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylos/painel_admin.css">
+    <link rel="stylesheet" href="/stylos/produtos.css">
+<body>
+
+<%- include('partions/header.ejs') %>
+<main>
+    <%- include('partions/menu.ejs') %>
+        
+    <section id="corpoPincipal">
+        <p>Lista de Produtos</p>
+
+        <article id="listasProdutos">   
+             <% listas.forEach( itens => { %>
+                <p><%= itens.nome %></p>
+                <p><%= itens.preco %></p>    
+                <p><% "quantidade" %></p>    
+                <p><% "vslidade" %></p>    
+                  
+             <% }); %>
+
+        </article>
+    </SEction>
+
+   </section>
+        <form action="/" method="post"></form>
+        <div>
+            <label for=""></label>
+            <input type="text">
+        </div>
+
+        <div>
+            <label for=""></label>
+            <input type="text">
+        </div>
+        
+        <div>
+            <label for=""></label>
+            <input type="text">
+        </div>
+        
+    </section>
+
+</main>
+
+   
+    
+</body>
+</html>
