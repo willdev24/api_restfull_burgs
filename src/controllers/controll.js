@@ -9,10 +9,10 @@ async function get(req,res){
   const obj = id? {_id:id} : null
 
   const listas = await customes.Model.find(obj)
-  console.log(listas)  
-  res.render("produtos.ejs",{
-       listas
-    })
+  //console.log(listas)  
+  res.render("produtos/produtos.ejs",{
+    listas
+  })
    
 
 }

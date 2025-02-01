@@ -1,12 +1,12 @@
  function adm(req, res){
 
-    res.render("index")
+    res.render("acesso/index")
 
 }
 
  function painelAdmin( req, res){
 
-    res.render("painel")
+    res.render("painel.ejs")
 
 }
 

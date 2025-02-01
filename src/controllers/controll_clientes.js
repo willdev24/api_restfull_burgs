@@ -8,7 +8,7 @@ async function getClaint(req,res){
 const obj = id? {_id:id} : null
  
   const listas = await customesModel.Model02.find(obj)
-    res.send(listas)
+    res.render("clientes/clientes.ejs")
    
 
 }
