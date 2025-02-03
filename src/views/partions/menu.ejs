@@ -1,16 +1,15 @@
-<section id="menu">
-    <article>
-      <nav> 
-    <ul>
-        <a href="/"><li>PRODUTOS</li></a>
-        <a href=""><li>PEDIDOS</li></a>
-        <a href="/claint"><li>CLIENTES</li></a>
-        <a href=""><li>RELATORIOS</li></a>
-        <a href=""><li>CONFIGURAÇOES</li></a>
-        <a href=""><li>PEDIDO DE MESA</li></a>
-       </ul>
-    </nav>
 
-    </article>   
-    <p>sair</p>
-    </section>
+<div class="sidebar">
+    <a href="/" onclick="loadPage('produtos')">Produtos</a>
+    <a href="/claint" onclick="loadPage('clientes')">Clientes</a>
+    <a href="#" onclick="loadPage('pedidos')">Pedidos</a>
+    <a href="#" onclick="loadPage('relatorios')">Relatórios</a>
+    <a href="#" onclick="loadPage('pedidos_mesa')">Pedidos de Mesa</a>
+    <a href="#" onclick="loadPage('historico_pedidos')">Histórico de Pedidos</a>
+    <a href="#" onclick="loadPage('configuracoes')">Configurações</a>
+</div>
+
+<div class="content" id="main-content">
+    <h1>Bem-vindo ao Painel Administrativo</h1>
+    <p>Selecione uma opção no menu para começar.</p>
+</div>
