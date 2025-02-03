@@ -50,10 +50,17 @@ app.put("/claint/:id",route)
 app.delete("/claint/:id",route)
 
 //rotas dos pedidos
+app.get("/pedidos", route)
 
 //rotas painel administrativo
 app.get("/acess",route)
 app.get("/loginAdministrator",route)
+
+//rota menus
+app.get("/mesa",route)
+app.get("/config",route)
+app.get("/relatorio",route)
+app.get("/historicoPedidos",route)
 
 
 //porta do servidor 

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <%- include('partions/head.ejs') %>
 </head>
+
 <body>
 
     <%- include('partions/menu.ejs') %>
-    <%- include('partions/main.ejs') %>    
+
+    <p style="cursor: pointer;" class="teste" onclick="loadPage('pedidos_mesa')">ABRIR</p> <br> <br>
+    <section id="main-content"></section>
     
 </body>
+            <script src="/servpainel/main.js"></script>
 </html>

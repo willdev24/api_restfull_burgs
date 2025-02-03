@@ -1,6 +1,6 @@
 async function getPedidos(req, res){
     
-//const {daa} = req.body
+res.render("pedidos/pedidos.ejs")
 
 }
 
