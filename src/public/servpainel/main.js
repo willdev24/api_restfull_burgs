@@ -66,3 +66,6 @@ function cancelarPedido(mesa) {
     mesas[mesa] = [];
     loadPage('pedidos_mesa');
 }
+
+
+
