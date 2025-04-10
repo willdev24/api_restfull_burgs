@@ -51,6 +51,7 @@ app.delete("/claint/:id",route)
 
 //rotas dos pedidos
 app.get("/pedidos", route)
+app.post("/pedidos", route)
 
 //rotas painel administrativo
 app.get("/acess",route)
@@ -64,7 +65,7 @@ app.get("/historicoPedidos",route)
 
 
 //porta do servidor 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 app.listen(port, function(){
     console.log(`servidor rodando na porta ${port}`)
 })

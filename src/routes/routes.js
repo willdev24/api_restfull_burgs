@@ -12,7 +12,6 @@ route.post("/",controllRoutes.post)
 route.put("/:id",controllRoutes.put)
 route.delete("/:id",controllRoutes.del)
 
-
 //rotas clientes
 //route.
 
@@ -23,6 +22,7 @@ route.delete("/claint/:id", controllClaint.delClaint)
 
 //lista de pedidos
 route.get("/pedidos",controlPedidos.getPedidos)
+route.post("/pedidos",controlPedidos.postPedidos)
 //route.post()
 
 //rota administrador 
@@ -34,6 +34,7 @@ route.get("/mesa",controlMenus.getmesa)
 route.get("/relatorio",controlMenus.getrelatorios)
 route.get("/config",controlMenus.getconfig)
 route.get("/historicoPedidos", controlMenus.gethistoricoPedidos)
+
 
 
 module.exports={
